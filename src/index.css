@@ -1,13 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Lexend Deca font */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Lexend Deca", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.shiny-button {
+  position: relative;
+  overflow: hidden; /* Ensure the shine stays within the button bounds */
+}
+
+.shiny-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  
+}
+
+.shiny-button:hover::before {
+  transform: translate(150%, 150%);
+}
+
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  scrollbar-width: thin;
+  
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(250 204 21) ; 
+  border-radius: 6px;
+  width: 4px;
+  padding-bottom: 25px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: rgb(23 37 84); 
+  border: 2px solid rgb(30 58 138);
+  border-radius: 6px;
+}
+
